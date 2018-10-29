@@ -27,6 +27,9 @@ namespace SavePasswords
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IPasswordsRepository, TestPasswordsRepository>();
+
+
             services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:SavePassIdentity:ConnectionString"]));
 
             services.AddIdentity<AppUser, IdentityRole>(opts => {
@@ -39,7 +42,7 @@ namespace SavePasswords
                 opts.Password.RequireUppercase = false;
                 opts.Password.RequireDigit = false;
             }).AddEntityFrameworkStores<AppIdentityDbContext>()
- .AddDefaultTokenProviders();
+            .AddDefaultTokenProviders();
 
             services.AddMvc();
         }

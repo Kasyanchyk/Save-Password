@@ -2,8 +2,7 @@
 @model LoginModel
 <html>
 <head>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    
     <!------ Include the above in your HEAD tag ---------->
     <style>
         body#LoginForm {
@@ -109,7 +108,7 @@
                     <h2>Login</h2>
                     <p>Please enter your email and password</p>
                 </div>
-                <form id="Login" asp-action="Login" method="post">
+                <form  asp-action="Login" method="post">
                     <div class="form-group">
                         <input asp-for="Email" class="form-control" id="inputEmail" placeholder="Email Address">
                     </div>
@@ -123,9 +122,10 @@
                     </div>
 
                     <button type="submit" class="btn btn-success">Log in</button>
-                    <button asp-action="Signup" class="btn btn-primary">Sign up</button>
+                    <a asp-controller="Account" asp-action="Signup" class="btn btn-primary">Sign up</a>
                     <div asp-validation-summary=" All" class="text-danger"></div>
                 </form>
+                
             </div>
 
         </div>

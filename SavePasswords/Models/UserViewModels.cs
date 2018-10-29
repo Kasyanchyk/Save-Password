@@ -28,4 +28,15 @@ namespace SavePasswords.Models
         public string Name { get; set; }
 
     }
+
+
+    public class AddPassword
+    {
+
+        public string Name { get; set; }
+
+        public string Password { get; set; }
+
+        public string RepeatPassword { get; set; }
+    }
 }

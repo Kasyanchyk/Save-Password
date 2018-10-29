@@ -2,13 +2,13 @@
 @model CreateModel
 <html>
 <head>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+
     <!------ Include the above in your HEAD tag ---------->
     <style>
         body#SignupForm {
             background-color: #eee2cd;
         }
+
 
         .form-heading {
             color: #fff;
@@ -98,6 +98,9 @@
                 font-size: 13px;
                 text-decoration: none;
             }
+
+
+        
     </style>
 </head>
 <body id="SignupForm">
@@ -123,8 +126,9 @@
                         <input asp-for="Password" class="form-control" id="inputPassword" placeholder="Password" type="password">
                     </div>
                     <button type="submit" class="btn btn-success">Sign up</button>
+
+                    <div asp-validation-summary="All" class="text-danger" ></div>
                 </form>
-                <div asp-validation-summary=" All" class="text-danger"></div>
             </div>
 
         </div>
