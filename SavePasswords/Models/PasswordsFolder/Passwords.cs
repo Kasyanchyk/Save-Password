@@ -21,7 +21,7 @@ namespace SavePasswords.Models
         public string EncryptedPassword { get; set; }
 
 
-        public  string HashPassword(string password)
+        /*public  string HashPassword(string password)
         {
             byte[] salt;
             byte[] buffer2;
@@ -38,6 +38,6 @@ namespace SavePasswords.Models
             Buffer.BlockCopy(salt, 0, dst, 1, 0x10);
             Buffer.BlockCopy(buffer2, 0, dst, 0x11, 0x20);
             return Convert.ToBase64String(dst);
-        }
+        }*/
     }
 }
