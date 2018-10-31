@@ -17,8 +17,11 @@ namespace SavePasswords.Controllers
             userManager = usrMgr;
         }
 
-        public ViewResult Index() => View(userManager.Users);
+        public ViewResult Index()
+        {
+            return View(userManager.Users);
+        }
 
-
+       
     }
 }

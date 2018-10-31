@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SavePasswords.Models;
 
 namespace SavePasswords.Migrations
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    partial class AppIdentityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181031161818_InitialPass")]
+    partial class InitialPass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

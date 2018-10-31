@@ -11,6 +11,8 @@ namespace SavePasswords.Models
     {
         public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options) : base(options)
         {
+
         }
+        public DbSet<Password> Passwords { get; set; }
     }
 }

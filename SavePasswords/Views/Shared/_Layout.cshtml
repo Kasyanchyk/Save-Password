@@ -33,6 +33,8 @@
             }
             else if (User?.Identity?.IsAuthenticated ?? false)
             {
+            <a asp-controller="Passwords" asp-action="AddPassword"
+               class="btn btn-danger">Add password</a>
                 <a asp-controller="Account" asp-action="Logout"
                    class="btn btn-danger">Logout</a>
             }

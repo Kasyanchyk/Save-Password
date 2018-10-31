@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace SavePasswords.Models
 {
-    public class TestPasswordsRepository : IPasswordsRepository
+    public class TestPasswordsRepository /*: IPasswordsRepository*/
     {
-        public IEnumerable<Passwords> Passwords => new List<Passwords>
+        public IEnumerable<Password> Passwords => new List<Password>
         {
 
         };

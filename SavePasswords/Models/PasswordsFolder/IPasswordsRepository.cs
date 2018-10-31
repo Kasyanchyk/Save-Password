@@ -7,6 +7,8 @@ namespace SavePasswords.Models
 {
     public interface IPasswordsRepository
     {
-        IEnumerable<Passwords> Passwords { get; }
+        IEnumerable<Password> Passwords { get; }
+
+        void AddPassword(Password pass);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SavePasswords.Models
 {
-    public class Passwords
+    public class Password
     {
         public int Id { get; set; }
 
@@ -18,7 +18,9 @@ namespace SavePasswords.Models
 
         public string Url { get; set; }
 
-        public string EncryptedPassword { get; set; }
+        public string CryptedPassword { get; set; }
+
+
 
 
         /*public  string HashPassword(string password)

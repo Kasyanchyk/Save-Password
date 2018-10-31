@@ -8,6 +8,6 @@ namespace SavePasswords.Models
 {
     public class AppUser : IdentityUser
     {
-
+        
     }
 }

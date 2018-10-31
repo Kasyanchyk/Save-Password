@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SavePasswords.Models;
+using SavePasswords.Models.PasswordsFolder;
 
 namespace SavePasswords
 {
@@ -27,7 +28,7 @@ namespace SavePasswords
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IPasswordsRepository, TestPasswordsRepository>();
+            services.AddTransient<IPasswordsRepository, EFPasswordRepository>();
 
 
             services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:SavePassIdentity:ConnectionString"]));
